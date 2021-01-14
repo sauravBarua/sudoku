@@ -67,6 +67,13 @@ var sudoku = [
 function generateSudoku() {
     var rendomNumber = Math.floor(Math.random() * allSudoku.length);
     console.log(allSudoku[rendomNumber]);
+    var index = 0;
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < 9; j++) {
+            sudoku[i][j] = allSudoku[rendomNumber][index];
+            index++;
+        }
+    }
 
 }
 
