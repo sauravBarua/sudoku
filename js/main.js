@@ -74,7 +74,6 @@ function generateSudoku() {
             index++;
         }
     }
-
 }
 
 generateSudoku();
