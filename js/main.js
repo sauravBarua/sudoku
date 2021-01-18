@@ -65,7 +65,7 @@ var sudoku = [
 
 function generateSudoku() {
     var randomLine = Math.floor(Math.random() * allSudoku.length);
-    console.log(allSudoku[randomLine]);
+    //console.log(allSudoku[randomLine]);
 
     var index = 0;
     for (var i = 0; i < 9; i++) {
@@ -75,12 +75,12 @@ function generateSudoku() {
         }
     }
 
-    console.log(sudoku);
-}
+    //console.log(sudoku);
+} // create function generateSudoku()
 
 $(document).ready(function() {
 
-    generateSudoku();
+    generateSudoku(); //call function generateSudoku()
 
     var sudokuHtml = '<div class="container">';
     for (var i = 0; i < 9; i++) {
@@ -88,9 +88,9 @@ $(document).ready(function() {
         for (var j = 0; j < 9; j++) {
             sudokuHtml = sudokuHtml + `<div id="col${j}" class="col-1 case">${sudoku[i][j]}</div>`;
         }
-        sudokuHtml = sudokuHtml + '</div>';
+        sudokuHtml = sudokuHtml + '</div>'; // close "div class=row" tag
     }
-    sudokuHtml = sudokuHtml + '</div>';
+    sudokuHtml = sudokuHtml + '</div>'; //close "div class=container" tag
 
     $("#sudoku").html(sudokuHtml);
 })
