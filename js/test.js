@@ -84,13 +84,13 @@ $(document).ready(function() {
 
     var sudokuHtml = '<div class="container">';
     for (var i = 0; i < 9; i++) {
-        sudokuHtml = sudokuHtml + `<div id="row${i}" class="row">`;
+        sudokuHtml += `<div id="row${i}" class="row">`;
         for (var j = 0; j < 9; j++) {
-            sudokuHtml = sudokuHtml + `<div id="col${j}" class="col-1 case">${sudoku[i][j]}</div>`;
+            sudokuHtml += `<div id="col${j}" class="col-1 case">${sudoku[i][j]}</div>`;
         }
-        sudokuHtml = sudokuHtml + '</div>';
+        sudokuHtml += '</div>';
     }
-    sudokuHtml = sudokuHtml + '</div>';
+    sudokuHtml += '</div>';
 
     $("#sudoku").html(sudokuHtml);
 })
